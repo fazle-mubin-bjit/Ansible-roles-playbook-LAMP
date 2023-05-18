@@ -1,0 +1,10 @@
+---
+- name: Install LAMP in centos-clients practice
+  hosts: client
+  remote_user: ansible
+  become: true
+  roles:
+    - Apache
+    - Mysql
+    - Php
+

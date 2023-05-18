@@ -1,0 +1,5 @@
+---
+# vars file for Apache
+package_httpd_centos:
+  name: httpd
+  state: installed

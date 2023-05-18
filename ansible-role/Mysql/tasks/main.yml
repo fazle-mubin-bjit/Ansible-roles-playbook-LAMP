@@ -1,0 +1,25 @@
+---
+# tasks file for Mysql
+    - name: Download sources
+      get_url:
+        url: http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+        dest: .
+
+
+    - name: Install package
+      yum:
+        name: ./mysql-community-release-el7-5.noarch.rpm
+        state: present
+
+
+    - name: Install MySQL
+      yum: 
+        name: "{{ package_mysql_centos.name }}"
+        state: "{{ package_mysql_centos.state }}"
+
+
+    - name: Start the MYSQL service
+      service:
+        name: mysqld
+        enabled: yes
+        state: started

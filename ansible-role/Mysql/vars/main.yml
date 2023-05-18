@@ -1,0 +1,5 @@
+---
+# vars file for Mysql
+package_mysql_centos:
+  name: mysql-server 
+  state: installed

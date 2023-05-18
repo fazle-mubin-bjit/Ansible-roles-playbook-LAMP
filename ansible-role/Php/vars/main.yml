@@ -1,0 +1,7 @@
+---
+# vars file for Php
+package_php_centos:
+  name: 
+      - php 
+      - php-mysql 
+  state: latest

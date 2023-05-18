@@ -1,0 +1,12 @@
+---
+# tasks file for Php
+    - name: Installing PHP
+      yum:
+        name: "{{ package_php_centos.name }}" 
+        state: "{{ package_php_centos.state }}" 
+
+
+    - name: Copying your php file in the /var/www/html
+      copy:
+        src: index.php
+        dest: /var/www/html/index.php 
